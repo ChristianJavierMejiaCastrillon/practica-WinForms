@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Practica5
+{
+    public class Persona
+    {
+        // Propiedades de la persona
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Edad { get; set; }
+        public string Direccion { get; set; }
+
+        // Constructor que toma cuatro argumentos: nombre, apellido, edad y dirección
+        public Persona(string nombre, string apellido, int edad, string direccion)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Edad = edad;
+            Direccion = direccion;
+        }
+
+        public void Mostrar()
+        {
+            MessageBox.Show($"Nombre: {Nombre}\nApellido: {Apellido}\nEdad: {Edad}\nDirección: {Direccion}", "Información de la persona", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+}
